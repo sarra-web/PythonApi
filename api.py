@@ -1,8 +1,9 @@
 from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
+import os
 from dotenv import load_dotenv
 import json
-import os
+
 load_dotenv()
 print("-----")
 print(os.getenv("PATH"))
