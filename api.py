@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import json
 import os
 load_dotenv()
+print("-----")
 print(os.getenv("PATH"))
 API_KEY=os.getenv("API_KEY")
 
