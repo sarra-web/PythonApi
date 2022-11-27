@@ -20,7 +20,7 @@ jobs:
         username: idsarra
         password: sarra1MAMA2rim3.
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag idsarra/image:imagedocker
+      run: docker build . --file Dockerfile --tag idsarra/clockbox:latest
   deploy:
     runs-on: ubuntu-latest
     steps:
