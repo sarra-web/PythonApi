@@ -18,17 +18,18 @@ parameters = {
 }
 headers = {
     'Accepts': 'application/json',
-    'X-CMC_PRO_API_KEY':{API_KEY}
+     'X-CMC_PRO_API_KEY':API_KEY,
 }
 
 session = Session()
 session.headers.update(headers)
 
 try:
-    response = session.get(url, params=parameters)
-    data = json.loads(response.text)
-    json_string = json.dumps(data['data'])
-
-    print(json_string)
+  response = session.get(url, params=parameters)
+  data = json.loads(response.text)
+ # print(data)
+  for i in data['data']:
+    print("id "+str(i['id'])+"\n")
+    print("quote"+ str(i['quote'])+"\n")
 except (ConnectionError, Timeout, TooManyRedirects) as e:
-    print(e)
+  print(e)
