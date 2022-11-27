@@ -20,9 +20,9 @@ jobs:
         username: idsarra
         password: sarra1MAMA2rim3.
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag idsarra/sarra:${GITHUB_SHA::8}
+      run: docker build . --file Dockerfile --tag idsarra/image:imagedocker
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Push Docker Image to Docker Hub
-        run: docker push ${{secrets.DOCKER_USERNAME}}/sarra:${GITHUB_SHA::8}
+        run: docker push idsarra/image:imagedocker
