@@ -25,4 +25,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Push Docker Image to Docker Hub
-        run: docker push idsarra/
+        run: docker push idsarra/image
