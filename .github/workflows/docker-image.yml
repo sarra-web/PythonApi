@@ -21,8 +21,4 @@ jobs:
         password: sarra1MAMA2rim3.
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag idsarra/clockbox:latest
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Push Docker Image to Docker Hub
-        run: docker push idsarra/clockbox:latest
+  
