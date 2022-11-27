@@ -1,13 +1,13 @@
 from requests import Request, Session
 from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
+import json
 import os
 from dotenv import load_dotenv
-import json
 
 load_dotenv()
 print("-----")
-print(os.getenv("PATH"))
-API_KEY=os.getenv("API_KEY")
+#print(os.getenv("PATH"))
+API_KEY=os.getenv('API_KEY')
 
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
 parameters = {
